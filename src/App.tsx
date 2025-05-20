@@ -5,11 +5,13 @@ import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import SingleProduct from './pages/SingleProduct'
 import Cart from './pages/Cart'
+import ScrollToTop from './components/ScrollToTop'
 
 function App() {
 
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <div className="min-h-screen flex flex-col bg-blue-50">
         <Navbar />
         <main className="flex-grow">
