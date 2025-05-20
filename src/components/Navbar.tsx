@@ -1,7 +1,6 @@
-import { useEffect, useState } from 'react';
+import {  useState } from 'react';
 import { Link } from 'react-router-dom';
 import { MagnifyingGlassIcon, ShoppingCartIcon, XMarkIcon, Bars3Icon } from '@heroicons/react/24/outline';
-import cartHelper from '../utils/cartHelper';
 import { useCart } from '../contexts/CartContext';
 
 const Navbar = () => {

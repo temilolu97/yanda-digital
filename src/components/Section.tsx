@@ -1,7 +1,5 @@
 import { ShoppingBagIcon } from '@heroicons/react/24/outline';
-import React from 'react'
 import { useNavigate } from 'react-router-dom';
-import cartHelper from '../utils/cartHelper';
 interface SectionProps{
     items:any[],
     title:string

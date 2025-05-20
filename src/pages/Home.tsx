@@ -1,4 +1,3 @@
-import React from 'react'
 import Section from '../components/Section';
 import iphone1 from '../assets/products/iphone14.png'
 import iphone2 from '../assets/products/iphone16.png'
@@ -14,7 +13,6 @@ import { AdjustmentsHorizontalIcon, ChatBubbleBottomCenterIcon, CheckBadgeIcon, 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
-// import 'swiper/css/navigation'
 import 'swiper/css/autoplay';
 
 

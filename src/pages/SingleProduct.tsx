@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
-import cartHelper from "../utils/cartHelper";
 import { useCart } from "../contexts/CartContext";
 
 export default function SingleProduct() {
@@ -17,11 +16,6 @@ export default function SingleProduct() {
 
     if (!product) return <p className="text-center py-10">Product not found.</p>;
 
-
-    const handleAddToCart = (item: any) => {
-        item.quantity = quantity;
-        cartHelper.addToCart(item)
-    }
     return (
         <div className="min-h-screen max-w-5xl mx-auto p-6">
             <div className="grid md:grid-cols-2 gap-10 bg-white rounded-3xl shadow-2xl overflow-hidden">
