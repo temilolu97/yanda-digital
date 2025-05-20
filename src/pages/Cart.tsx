@@ -1,15 +1,15 @@
 import { TrashIcon } from "@heroicons/react/24/outline";
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+// import { useNavigate } from "react-router-dom";
 import { useCart } from "../contexts/CartContext";
 
-interface CartItem {
-    id: number;
-    name: string;
-    price: number;
-    image: string;
-    quantity: number;
-}
+// interface CartItem {
+//     id: number;
+//     name: string;
+//     price: number;
+//     image: string;
+//     quantity: number;
+// }
 
 
 
@@ -19,7 +19,6 @@ export default function Cart() {
     
     // const [cartItems, setCartItems] = useState<CartItem[]>(initialCart);
     const [loading, setLoading] = useState<boolean>(false)
-    const navigate = useNavigate();
 
     // const increaseQty = (id: number) => {
     //     setCartItems((items) =>
