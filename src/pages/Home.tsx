@@ -73,73 +73,14 @@ const Home = () => {
             },
         ],
         accessories: [
-            {
-                id: 9,
-                name: "Oraimo FreePods Lite 40-hour Playtime ENC True Wireless Earbuds",
-                price: 18727,
-                image: "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/81/6291752/1.jpg?3301",
-            },
-            {
-                id: 10,
-                name: "Oraimo FreePods 3C ENC Calling Noise Cancellation True Wireless Earbuds",
-                price: 35721,
-                image: "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/93/0989042/1.jpg?1126",
-            },
-            {
-                id: 11,
-                name: "4pcs Mobile Gaming Thumb Sleeve Sets, Wasp Feelers(2 Pair)",
-                price: 2315,
-                image: "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/47/1938042/1.jpg?1750",
-            },
-            {
-                id: 12,
-                name: "Ace Elec 50000 MAh Power Banks With LED Light Portable Super Fast Charger",
-                price: 25500,
-                image: "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/89/0157843/1.jpg?2245",
-            },
-            {
-                id: 13,
-                name: "XIAOMI Band 6 Fitness Tracker Bluetooth Watch",
-                price: 56700,
-                image: "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/16/437377/1.jpg?7503",
-            },
-            {
-                id: 14,
-                name: "itel PowerPulse A1160 Power-Bank 20000mAh 12W Fast Charging TypeC",
-                price: 15273,
-                image: "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/60/7595563/1.jpg?1325",
-            },
-            {
-                id: 15,
-                name: "Ace Elec 50000 MAh Power Banks With LED Light Portable Super Fast Charger..",
-                price: 24900,
-                image: "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/56/3460204/1.jpg?9808",
-            },
-            {
-                id: 16,
-                name: "VIC ♛20000mAh Power Banks Portable Charger Ultra Slim Battery Pack( Type C Input)",
-                price: 6790,
-                image: "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/28/3417743/1.jpg?3810",
-            },
-            {
-                id: 17,
-                name: "Ace Elec Power Banks 30000 MAh Portable Super Fast Charger",
-                price: 14824,
-                image: "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/17/0106592/1.jpg?5616",
-            },
-            {
-                id: 18,
-                name: "Oraimo Traveler 4 20000mAh 10.5W Power Banks",
-                price: 13500,
-                image: "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/21/4165793/1.jpg?1884",
-            },
-            {
-                id: 19,
-                name: "Philly 20000mAh Power Charging Bank",
-                price: 7895,
-                image: "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/91/5791463/1.jpg?4960",
-            }
-
+            { id: 9, name: "XIAOMI Band 6 Fitness Tracker Bluetooth Watch", price: 56700, image: "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/16/437377/1.jpg?7503" },
+            { id: 20, name: "New Age 55000 MAh PD 22.5W Digital Fast Charge Power Bank- FC55P", price: 51990, image: "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/46/8367953/1.jpg?2143" },
+            { id: 11, name: "Zealot S37L BT Boombox With Subwoofers Wireless Speakers", price: 51753, image: "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/36/6508372/1.jpg?0604" },
+            { id: 12, name: "For Apple Iphone Se 4.7 Inch/iphone 8 Plus/7 Plus Nillkin", price: 70338, image: "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/15/7171741/1.jpg?9388" },
+            { id: 13, name: "New Age 50000mA FC50P POWER BANK FAST CHARGE TYPE C INPUT", price: 58900, image: "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/81/6033511/1.jpg?4989" },
+            { id: 14, name: "itel Max Power 600PF PD/QC3.0 Four Output, Four Input Power Bank With Lamp", price: 72950, image: "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/89/8268432/1.jpg?6215" },
+            { id: 16, name: "Xdobo X8II 60W Portable Wireless Speaker TWS HiFi Sound", price: 55267, image: "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/50/9261903/1.jpg?7448" },
+            { id: 18, name: "High Power Car Jump Starter Power Bank & Tyre Inflator", price: 53000, image: "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/44/887752/1.jpg?2893" }
 
         ],
         electronics: [
@@ -328,7 +269,7 @@ const Home = () => {
 
     const { hash } = useLocation();
     console.log(hash);
-    
+
 
     useEffect(() => {
         if (hash) {
@@ -460,9 +401,9 @@ const Home = () => {
                 </div>
             </section>
 
-            <Section id="phones" title="Smartphones" items={products.smartphones} />
-            <Section id="accessories" title="Gadgets & Accessories" items={products.accessories} />
-            <Section id="electronics" title="Electronics" items={products.electronics} />
+            <Section id="phones" title="Smartphones" items={products.smartphones.filter(product => product.price > 50000)} />
+            <Section id="accessories" title="Gadgets & Accessories" items={products.accessories.filter(product => product.price >= 50000)} />
+            <Section id="electronics" title="Electronics" items={products.electronics.filter(product => product.price >= 50000)} />
 
             <section className="mt-16 text-center">
                 <p className="text-green-600 font-medium">Free delivery in Lagos on orders above ₦150,000</p>
