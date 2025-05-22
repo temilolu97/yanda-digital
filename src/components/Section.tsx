@@ -1,4 +1,3 @@
-import { ShoppingBagIcon } from '@heroicons/react/24/outline';
 import { useNavigate } from 'react-router-dom';
 interface SectionProps{
     id:string

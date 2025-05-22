@@ -1,13 +1,13 @@
 import Section from '../components/Section';
-import iphone1 from '../assets/products/iphone14.png'
+// import iphone1 from '../assets/products/iphone14.png'
 import iphone2 from '../assets/products/iphone16.png'
-import samsung from '../assets/products/samusung s21.jpg'
-import pixel from '../assets/products/google pixel 9.jpg'
-import tecno from '../assets/products/Camon 30.jpg'
+// import samsung from '../assets/products/samusung s21.jpg'
+// import pixel from '../assets/products/google pixel 9.jpg'
+// import tecno from '../assets/products/Camon 30.jpg'
 import jblheadphone from '../assets/products/jbl headphone.png'
-import jblspeaker from '../assets/products/jbl speaker.jpg'
-import powerbank from '../assets/products/powerbank.jpg'
-import wirelessCombo from '../assets/products/wireless combo.jpg'
+// import jblspeaker from '../assets/products/jbl speaker.jpg'
+// import powerbank from '../assets/products/powerbank.jpg'
+// import wirelessCombo from '../assets/products/wireless combo.jpg'
 import dellmonitor from '../assets/products/dell monitor.png'
 import { AdjustmentsHorizontalIcon, ChatBubbleBottomCenterIcon, CheckBadgeIcon, ShieldCheckIcon } from '@heroicons/react/24/outline';
 import { Swiper, SwiperSlide } from 'swiper/react';
