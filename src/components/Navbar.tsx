@@ -2,6 +2,7 @@ import {  useState } from 'react';
 import { Link } from 'react-router-dom';
 import { MagnifyingGlassIcon, ShoppingCartIcon, XMarkIcon, Bars3Icon } from '@heroicons/react/24/outline';
 import { useCart } from '../contexts/CartContext';
+import logo from '../assets/yandaLogo.png'
 
 const Navbar = () => {
   const {cartItems} = useCart()
@@ -19,12 +20,13 @@ const Navbar = () => {
 
 
   return (
-    <nav className="bg-blue-50 shadow-lg">
+    <nav className="sticky top-0 z-50 bg-blue-50 shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="flex-shrink-0 flex items-center">
-              <span className="text-2xl font-bold text-blue-600">YANDA DIGITAL</span>
+              <img src={logo} className='h-24'/>
+              {/* <span className="text-2xl font-bold text-blue-600">YANDA DIGITAL</span> */}
             </Link>
           </div>
 
@@ -51,17 +53,17 @@ const Navbar = () => {
 
           {/* Desktop menu */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
+            <Link to={{pathname:"/", hash:"#home"}} className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
               Home
             </Link>
-            <Link to="/products" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
-              Products
+            <Link to={{pathname:"/", hash:"#phones"}} className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
+              Smart Phones
             </Link>
-            <Link to="/about" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
-              About
+            <Link to={{pathname:"/", hash:"#accessories"}} className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
+              Accessories
             </Link>
-            <Link to="/contact" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
-              Contact
+            <Link to={{pathname:"/", hash:"#electronics"}} className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
+              Electronics
             </Link>
             <Link to="/cart" className="relative text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
               <ShoppingCartIcon className="h-6 w-6" />
@@ -124,15 +126,15 @@ const Navbar = () => {
             <Link to="/" className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">
               Home
             </Link>
-            <Link to="/products" className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">
-              Products
-            </Link>
-            <Link to="/about" className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">
-              About
-            </Link>
-            <Link to="/contact" className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">
-              Contact
-            </Link>
+            <a href="#phones" className="text-gray-700 hover:text-blue-600 px-3 py-2 block rounded-md text-sm font-medium">
+              Smart Phones
+            </a>
+            <a href="#accessories" className="text-gray-700 hover:text-blue-600 px-3 py-2 block rounded-md text-sm font-medium">
+              Accessories
+            </a>
+            <a href="#electronics" className="text-gray-700 hover:text-blue-600 px-3 py-2 block rounded-md text-sm font-medium">
+              Electronics
+            </a>
           </div>
         </div>
       )}

@@ -14,7 +14,7 @@ import { useCart } from "../contexts/CartContext";
 
 
 export default function Cart() {
-    let { cartItems } = useCart()
+    let { cartItems, removeFromCart, updateQuantity } = useCart()
     console.log(cartItems);
     
     // const [cartItems, setCartItems] = useState<CartItem[]>(initialCart);
@@ -75,13 +75,13 @@ export default function Cart() {
                                 <img src={cartItem.image} alt={cartItem.name} className="h-20 w-20 object-cover" />
                                 <p className="text-sm font-medium text-gray-800">{cartItem.name}</p>
                                 <div className="flex items-center justify-center gap-3">
-                                    <div>-</div>
+                                    <div className="hover:cursor-pointer" onClick={()=>updateQuantity(cartItem.id,cartItem.quantity -1)}>-</div>
                                     <input type="number" value={cartItem.quantity} className="w-10 border text-center" />
-                                    <div>+</div>
+                                    <div className="hover:cursor-pointer" onClick={()=>updateQuantity(cartItem.id,cartItem.quantity +1)}>+</div>
                                 </div>
                                 <p className="text-right font-semibold text-gray-700 break-words sm:text-base">{formatPrice(cartItem.price)}</p>
                                 <div className="flex justify-center">
-                                    <TrashIcon className="h-6 w-6" />
+                                    <TrashIcon onClick={()=>removeFromCart(cartItem.id)} className="h-6 w-6" />
                                 </div>
                             </div>
                         ))

@@ -39,27 +39,27 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/products" className="text-gray-300 hover:text-white transition-colors">
+                <Link to="/" className="text-gray-300 hover:text-white transition-colors">
                   All Products
                 </Link>
               </li>
               <li>
-                <Link to="/new-arrivals" className="text-gray-300 hover:text-white transition-colors">
+                <Link to="" className="text-gray-300 hover:text-white transition-colors">
                   New Arrivals
                 </Link>
               </li>
               <li>
-                <Link to="/best-sellers" className="text-gray-300 hover:text-white transition-colors">
+                <Link to="" className="text-gray-300 hover:text-white transition-colors">
                   Best Sellers
                 </Link>
               </li>
               <li>
-                <Link to="/deals" className="text-gray-300 hover:text-white transition-colors">
+                <Link to="/" className="text-gray-300 hover:text-white transition-colors">
                   Special Deals
                 </Link>
               </li>
               <li>
-                <Link to="/gift-cards" className="text-gray-300 hover:text-white transition-colors">
+                <Link to="/" className="text-gray-300 hover:text-white transition-colors">
                   Gift Cards
                 </Link>
               </li>
@@ -71,21 +71,21 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Policies</h3>
             <div className="space-y-4">
               <div>
-                <h4 className="text-sm font-medium text-gray-300">Privacy Policy</h4>
+                <Link to="/privacy-policy"><h4 className="hover:underline text-sm font-medium text-gray-300">Privacy Policy</h4></Link>
                 <p className="text-sm text-gray-400 mt-1">
                   We take your data seriously and protect your personal information with secure systems. 
                   Your data is never sold or shared.
                 </p>
               </div>
               <div>
-                <h4 className="text-sm font-medium text-gray-300">Terms & Conditions</h4>
+                <Link to="/terms-and-conditions"><h4 className="hover:underline text-sm font-medium text-gray-300">Terms & Conditions</h4></Link>
                 <p className="text-sm text-gray-400 mt-1">
                   By using our platform, you agree to our guidelines on product warranties, 
                   payment security, and return procedures.
                 </p>
               </div>
               <div>
-                <h4 className="text-sm font-medium text-gray-300">Return Policy</h4>
+                <Link to="/refund-policy"><h4 className="hover:underline text-sm font-medium text-gray-300">Return Policy</h4></Link>
                 <p className="text-sm text-gray-400 mt-1">
                   Items can be returned within 5 days if faulty or not as described. T&Cs apply.
                 </p>
